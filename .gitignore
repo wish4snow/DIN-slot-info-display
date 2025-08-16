@@ -39,7 +39,7 @@
 *.FCStd1
 *.fcstd2
 *.FCStd2
-
+*.FCBak
 ### macOS ###
 # General
 .DS_Store
