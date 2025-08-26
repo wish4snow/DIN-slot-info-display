@@ -1,3 +1,4 @@
+#include <OBD2_KLine.h>
 #include <LiquidCrystal_I2C.h>
 
 const int LED_ARRAY [10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
