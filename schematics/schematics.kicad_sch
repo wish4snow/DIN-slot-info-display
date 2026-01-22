@@ -1439,7 +1439,7 @@
 		(uuid "707a1e90-f338-4283-a587-6a1cf34b4d0f")
 	)
 	(bus_entry
-		(at 100.33 91.44)
+		(at 100.33 90.17)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -1577,16 +1577,6 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 90.17) (xy 113.03 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0c23e0f5-d792-4f71-b293-dd1cdbbf0bf3")
-	)
-	(wire
-		(pts
 			(xy 223.52 157.48) (xy 223.52 152.4)
 		)
 		(stroke
@@ -1667,13 +1657,23 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 93.98) (xy 115.57 93.98)
+			(xy 102.87 92.71) (xy 113.03 92.71)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "32ef37be-fb12-4ff6-b4aa-f8aa7418bc98")
+	)
+	(wire
+		(pts
+			(xy 119.38 90.17) (xy 119.38 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34110c88-8d04-4025-84c2-ddc00bde82e5")
 	)
 	(wire
 		(pts
@@ -1907,7 +1907,7 @@
 	)
 	(bus
 		(pts
-			(xy 100.33 87.63) (xy 100.33 91.44)
+			(xy 100.33 87.63) (xy 100.33 90.17)
 		)
 		(stroke
 			(width 0)
@@ -1937,7 +1937,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 93.98) (xy 115.57 97.79)
+			(xy 113.03 92.71) (xy 113.03 96.52)
 		)
 		(stroke
 			(width 0)
@@ -1967,7 +1967,7 @@
 	)
 	(bus
 		(pts
-			(xy 100.33 91.44) (xy 100.33 101.6)
+			(xy 100.33 90.17) (xy 100.33 101.6)
 		)
 		(stroke
 			(width 0)
@@ -2024,6 +2024,16 @@
 			(type default)
 		)
 		(uuid "d10a3c6d-c2c6-4804-9337-1845c1dca2fb")
+	)
+	(wire
+		(pts
+			(xy 119.38 90.17) (xy 102.87 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d59b1a45-5cc5-4d8e-ab31-712c55ccaeab")
 	)
 	(wire
 		(pts
@@ -2226,7 +2236,7 @@
 		(uuid "acbecbfc-f24f-4c3f-9d83-986bf0cfdad9")
 	)
 	(label "5V"
-		(at 109.22 93.98 0)
+		(at 109.22 92.71 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2505,16 +2515,15 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 113.03 90.17 90)
+		(at 119.38 96.52 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1424092b-40ef-4c86-b8c1-642f7ed36f41")
 		(property "Reference" "#PWR09"
-			(at 119.38 90.17 0)
+			(at 119.38 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2523,16 +2532,16 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 116.84 90.1699 90)
+			(at 117.348 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 113.03 90.17 0)
+			(at 119.38 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2541,7 +2550,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 113.03 90.17 0)
+			(at 119.38 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2550,7 +2559,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 113.03 90.17 0)
+			(at 119.38 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3526,7 +3535,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 115.57 97.79 180)
+		(at 113.03 96.52 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3535,7 +3544,7 @@
 		(fields_autoplaced yes)
 		(uuid "ec6d468b-0a29-4101-9efb-b36e6e62c1ba")
 		(property "Reference" "#PWR010"
-			(at 115.57 93.98 0)
+			(at 113.03 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3544,7 +3553,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 115.57 102.87 0)
+			(at 113.03 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3552,7 +3561,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 115.57 97.79 0)
+			(at 113.03 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3561,7 +3570,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 115.57 97.79 0)
+			(at 113.03 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3570,7 +3579,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 115.57 97.79 0)
+			(at 113.03 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3822,8 +3831,49 @@
 		)
 	)
 	(sheet
-		(at 260.35 115.57)
-		(size 12.7 3.81)
+		(at 181.61 104.14)
+		(size 31.75 20.32)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "73d43910-215c-4653-bd75-968b808fbfdd")
+		(property "Sheetname" "led_i2c_board"
+			(at 193.802 103.378 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "comput_board.kicad_sch"
+			(at 181.61 125.0446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "schematics"
+				(path "/7fd7cdd6-b1c2-42a7-9276-fecd452b4132"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 59.69 128.27)
+		(size 12.7 6.35)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -3836,9 +3886,9 @@
 		(fill
 			(color 0 0 0 0.0000)
 		)
-		(uuid "73d43910-215c-4653-bd75-968b808fbfdd")
-		(property "Sheetname" "led_i2c_board"
-			(at 260.35 114.8584 0)
+		(uuid "e60fc60c-02f9-403b-8549-178b8f700884")
+		(property "Sheetname" "thermocouple_decoder"
+			(at 59.69 127.5584 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3846,8 +3896,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "comput_board.kicad_sch"
-			(at 260.35 119.9646 0)
+		(property "Sheetfile" "untitled.kicad_sch"
+			(at 59.69 135.2046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3858,7 +3908,7 @@
 		(instances
 			(project "schematics"
 				(path "/7fd7cdd6-b1c2-42a7-9276-fecd452b4132"
-					(page "2")
+					(page "3")
 				)
 			)
 		)
