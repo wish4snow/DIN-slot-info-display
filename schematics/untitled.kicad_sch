@@ -571,6 +571,263 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:Thermocouple"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TC"
+				(at -3.048 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Thermocouple"
+				(at -5.08 -4.064 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at -14.605 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at -14.605 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Thermocouple"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "thermocouple temperature sensor cold junction"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "PIN?ARRAY* bornier* *Terminal?Block* Thermo*Couple*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Thermocouple_0_1"
+				(polyline
+					(pts
+						(xy -4.064 -1.016) (xy -4.318 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.556 -0.508) (xy -3.81 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -3.048 0)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 0) (xy -3.302 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0.508) (xy -2.794 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 1.016) (xy -2.286 0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 1.524) (xy -1.778 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 2.032) (xy -1.27 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 2.54) (xy -0.762 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy -0.508 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy -0.254 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 -2.54) (xy -0.508 -2.54) (xy -4.318 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Thermocouple_1_1"
+				(pin passive line
+					(at 2.54 2.54 180)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -2.54 180)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+5V"
 			(power)
 			(pin_numbers
@@ -833,6 +1090,16 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ddf02911-af27-48a6-9393-580420822235")
+	)
+	(wire
+		(pts
+			(xy 67.31 102.87) (xy 116.84 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e3a6dec-ff3d-4519-a69e-d3a518e047bc")
 	)
 	(wire
 		(pts
@@ -1585,6 +1852,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 67.31 107.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a2db229e-75f4-43a2-bd4b-bf9bfc65f649")
+		(property "Reference" "#PWR018"
+			(at 67.31 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 67.31 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 67.31 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 67.31 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 67.31 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7d8fbfdf-c68a-46de-906c-5014f40ef030")
+		)
+		(instances
+			(project ""
+				(path "/7fd7cdd6-b1c2-42a7-9276-fecd452b4132/e60fc60c-02f9-403b-8549-178b8f700884"
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 116.84 111.76 0)
 		(unit 1)
@@ -1776,28 +2109,28 @@
 			)
 		)
 		(pin "6"
-			(uuid "da45f750-3ce6-4961-8fa0-32794e50bbcc")
+			(uuid "da45f750-3ce6-4961-8fa0-32794e50bbcd")
 		)
 		(pin "5"
-			(uuid "e14346c2-63db-4532-be87-d0bccf6eb6bf")
+			(uuid "e14346c2-63db-4532-be87-d0bccf6eb6c0")
 		)
 		(pin "7"
-			(uuid "64b47e9a-6162-48f9-9d3e-d77bf9c5f16f")
+			(uuid "64b47e9a-6162-48f9-9d3e-d77bf9c5f170")
 		)
 		(pin "8"
-			(uuid "b9a393b7-c9d8-4560-96d9-2dcc6dadcde1")
+			(uuid "b9a393b7-c9d8-4560-96d9-2dcc6dadcde2")
 		)
 		(pin "4"
-			(uuid "f4ea5a17-3ec9-4653-802b-071785627147")
+			(uuid "f4ea5a17-3ec9-4653-802b-071785627148")
 		)
 		(pin "3"
-			(uuid "1b212441-bde0-470d-9ccd-66f64cfff7ac")
+			(uuid "1b212441-bde0-470d-9ccd-66f64cfff7ad")
 		)
 		(pin "2"
-			(uuid "7564c38a-39e7-4f1c-a18b-ed772eec90ba")
+			(uuid "7564c38a-39e7-4f1c-a18b-ed772eec90bb")
 		)
 		(pin "1"
-			(uuid "4ea175ae-090b-4dd7-b6e8-b353ffae49a8")
+			(uuid "4ea175ae-090b-4dd7-b6e8-b353ffae49a9")
 		)
 		(instances
 			(project ""
@@ -1862,28 +2195,28 @@
 			)
 		)
 		(pin "7"
-			(uuid "09dcc3c6-ba53-413c-97f7-2c5bb8af6c24")
+			(uuid "09dcc3c6-ba53-413c-97f7-2c5bb8af6c25")
 		)
 		(pin "4"
-			(uuid "0fd76736-0951-4e73-a1d6-7c55b2b9b6f3")
+			(uuid "0fd76736-0951-4e73-a1d6-7c55b2b9b6f4")
 		)
 		(pin "6"
-			(uuid "034bd216-e3cc-4290-ad53-1f02f0942e11")
+			(uuid "034bd216-e3cc-4290-ad53-1f02f0942e12")
 		)
 		(pin "3"
-			(uuid "26fc0d88-6db2-432f-bd49-8d2d06b83e35")
+			(uuid "26fc0d88-6db2-432f-bd49-8d2d06b83e36")
 		)
 		(pin "2"
-			(uuid "2ccb4f29-ca6d-4c09-8bef-da0fd0605f36")
+			(uuid "2ccb4f29-ca6d-4c09-8bef-da0fd0605f37")
 		)
 		(pin "5"
-			(uuid "84eaec6b-f454-4074-9697-f84b4c66e0b4")
+			(uuid "84eaec6b-f454-4074-9697-f84b4c66e0b5")
 		)
 		(pin "1"
-			(uuid "e5804036-caf0-49b4-867e-edc78f450283")
+			(uuid "e5804036-caf0-49b4-867e-edc78f450284")
 		)
 		(pin "8"
-			(uuid "f58a4bca-0b53-4e73-9e3d-3476dbae8e4e")
+			(uuid "f58a4bca-0b53-4e73-9e3d-3476dbae8e4f")
 		)
 		(instances
 			(project ""
@@ -1948,33 +2281,100 @@
 			)
 		)
 		(pin "6"
-			(uuid "da45f750-3ce6-4961-8fa0-32794e50bbcc")
+			(uuid "da45f750-3ce6-4961-8fa0-32794e50bbce")
 		)
 		(pin "5"
-			(uuid "e14346c2-63db-4532-be87-d0bccf6eb6bf")
+			(uuid "e14346c2-63db-4532-be87-d0bccf6eb6c1")
 		)
 		(pin "7"
-			(uuid "64b47e9a-6162-48f9-9d3e-d77bf9c5f16f")
+			(uuid "64b47e9a-6162-48f9-9d3e-d77bf9c5f171")
 		)
 		(pin "8"
-			(uuid "b9a393b7-c9d8-4560-96d9-2dcc6dadcde1")
+			(uuid "b9a393b7-c9d8-4560-96d9-2dcc6dadcde3")
 		)
 		(pin "4"
-			(uuid "f4ea5a17-3ec9-4653-802b-071785627147")
+			(uuid "f4ea5a17-3ec9-4653-802b-071785627149")
 		)
 		(pin "3"
-			(uuid "1b212441-bde0-470d-9ccd-66f64cfff7ac")
+			(uuid "1b212441-bde0-470d-9ccd-66f64cfff7ae")
 		)
 		(pin "2"
-			(uuid "7564c38a-39e7-4f1c-a18b-ed772eec90ba")
+			(uuid "7564c38a-39e7-4f1c-a18b-ed772eec90bc")
 		)
 		(pin "1"
-			(uuid "4ea175ae-090b-4dd7-b6e8-b353ffae49a8")
+			(uuid "4ea175ae-090b-4dd7-b6e8-b353ffae49aa")
 		)
 		(instances
 			(project ""
 				(path "/7fd7cdd6-b1c2-42a7-9276-fecd452b4132/e60fc60c-02f9-403b-8549-178b8f700884"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Thermocouple")
+		(at 64.77 105.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e06406b8-361f-49b8-8887-2c6874ab1ae9")
+		(property "Reference" "TC1"
+			(at 62.738 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Thermocouple"
+			(at 62.738 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.165 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 50.165 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Thermocouple"
+			(at 64.77 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "259739de-212e-418a-8cc4-4110729eb00f")
+		)
+		(pin "1"
+			(uuid "6a0a34e0-3825-4afc-b72c-63426131f243")
+		)
+		(instances
+			(project ""
+				(path "/7fd7cdd6-b1c2-42a7-9276-fecd452b4132/e60fc60c-02f9-403b-8549-178b8f700884"
+					(reference "TC1")
 					(unit 1)
 				)
 			)
@@ -2100,28 +2500,28 @@
 			)
 		)
 		(pin "7"
-			(uuid "09dcc3c6-ba53-413c-97f7-2c5bb8af6c24")
+			(uuid "09dcc3c6-ba53-413c-97f7-2c5bb8af6c26")
 		)
 		(pin "4"
-			(uuid "0fd76736-0951-4e73-a1d6-7c55b2b9b6f3")
+			(uuid "0fd76736-0951-4e73-a1d6-7c55b2b9b6f5")
 		)
 		(pin "6"
-			(uuid "034bd216-e3cc-4290-ad53-1f02f0942e11")
+			(uuid "034bd216-e3cc-4290-ad53-1f02f0942e13")
 		)
 		(pin "3"
-			(uuid "26fc0d88-6db2-432f-bd49-8d2d06b83e35")
+			(uuid "26fc0d88-6db2-432f-bd49-8d2d06b83e37")
 		)
 		(pin "2"
-			(uuid "2ccb4f29-ca6d-4c09-8bef-da0fd0605f36")
+			(uuid "2ccb4f29-ca6d-4c09-8bef-da0fd0605f38")
 		)
 		(pin "5"
-			(uuid "84eaec6b-f454-4074-9697-f84b4c66e0b4")
+			(uuid "84eaec6b-f454-4074-9697-f84b4c66e0b6")
 		)
 		(pin "1"
-			(uuid "e5804036-caf0-49b4-867e-edc78f450283")
+			(uuid "e5804036-caf0-49b4-867e-edc78f450285")
 		)
 		(pin "8"
-			(uuid "f58a4bca-0b53-4e73-9e3d-3476dbae8e4e")
+			(uuid "f58a4bca-0b53-4e73-9e3d-3476dbae8e50")
 		)
 		(instances
 			(project ""
