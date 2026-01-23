@@ -10,6 +10,7 @@
 		(rev "1")
 		(company "wish4snow")
 		(comment 1 "unused opamp, may use later")
+		(comment 2 "square wave genorated at 100Hz")
 	)
 	(lib_symbols
 		(symbol "Amplifier_Operational:LM358"
