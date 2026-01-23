@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "b2e3b084-23f7-4d2b-9523-c4987ffd2b36")
 	(paper "USLetter")
+	(title_block
+		(title "LED I2C Board")
+		(date "2026-01-22")
+		(rev "1")
+		(company "wish4snow")
+	)
 	(lib_symbols
 		(symbol "Device:LED"
 			(pin_numbers

@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "7fd7cdd6-b1c2-42a7-9276-fecd452b4132")
 	(paper "USLetter")
+	(title_block
+		(title "Compute Board")
+		(date "2026-01-22")
+		(rev "1")
+		(company "wish4snow")
+	)
 	(lib_symbols
 		(symbol "Device:C"
 			(pin_numbers
@@ -1884,7 +1890,7 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 110.49) (xy 166.37 147.32)
+			(xy 165.1 110.49) (xy 165.1 147.32)
 		)
 		(stroke
 			(width 0)
@@ -2284,7 +2290,7 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 147.32) (xy 177.8 147.32)
+			(xy 165.1 147.32) (xy 177.8 147.32)
 		)
 		(stroke
 			(width 0)
@@ -2534,7 +2540,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 110.49) (xy 166.37 110.49)
+			(xy 153.67 110.49) (xy 165.1 110.49)
 		)
 		(stroke
 			(width 0)

@@ -4,6 +4,13 @@
 	(generator_version "9.0")
 	(uuid "0c3ac74f-f759-4d5d-a386-93adc7059cef")
 	(paper "USLetter")
+	(title_block
+		(title "Thermocouple Decoder")
+		(date "2026-01-22")
+		(rev "1")
+		(company "wish4snow")
+		(comment 1 "unused opamp, may use later")
+	)
 	(lib_symbols
 		(symbol "Amplifier_Operational:LM358"
 			(pin_names
@@ -1054,26 +1061,6 @@
 			)
 			(embedded_fonts no)
 		)
-	)
-	(text_box "unused opamp, may use later\n"
-		(exclude_from_sim no)
-		(at 106.68 177.8 0)
-		(size 35.56 6.35)
-		(margins 0.9525 0.9525 0.9525 0.9525)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "840e64a7-dc0c-4b4e-8992-faa4f3f0a13e")
 	)
 	(junction
 		(at 88.9 74.93)
