@@ -115,3 +115,7 @@ fp-info-cache
 
 # Local project settings
 *.kicad_prl
+
+# directories
+./schematics/schematics-backups
+
