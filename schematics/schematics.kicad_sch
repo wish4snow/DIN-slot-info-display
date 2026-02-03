@@ -4490,7 +4490,7 @@
 				)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "LM340AT"
 			(at 132.715 148.59 0)
 			(effects
 				(font
