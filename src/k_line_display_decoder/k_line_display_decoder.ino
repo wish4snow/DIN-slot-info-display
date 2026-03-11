@@ -1,3 +1,4 @@
+#include <AltSoftSerial.h>
 #include <OBD2_KLine.h>
 #include <LiquidCrystal_I2C.h>
 
@@ -6,7 +7,9 @@ const int led_amount = 11;
 unsigned long current_time = 0;
 unsigned long previous_time = 0;
 int flash_state;
-OBD2_KLine KLine(Serial, 10400, 10, 11);  // Uses Hardware Serial (Serial1) at 10400 baud, with RX on pin 10 and TX on pin 11.
+
+AltSoftSerial alt_serial;
+OBD2_KLine KLine(alt_serial, (uint32_t)10400, 0, 1);  // Uses Hardware Serial (Serial1) at 10400 baud, with RX on pin 10 and TX on pin 11.
 
 void setup() {
 	// setting led pins
