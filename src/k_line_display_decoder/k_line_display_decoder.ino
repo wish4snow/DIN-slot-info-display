@@ -6,6 +6,7 @@ const int led_amount = 11;
 unsigned long current_time = 0;
 unsigned long previous_time = 0;
 int flash_state;
+OBD2_KLine KLine(Serial, 10400, 10, 11);  // Uses Hardware Serial (Serial1) at 10400 baud, with RX on pin 10 and TX on pin 11.
 
 void setup() {
 	// setting led pins
@@ -22,8 +23,33 @@ void setup() {
 
 	lcd_left.backlight();
 	lcd_right.backlight();
-}
 
+	Serial.begin(115200);  // Start the default serial (for logging/debugging)
+	Serial.println("OBD2 K-Line Get Supported PIDs Example");
+
+	KLine.setDebug(Serial);          // Optional: outputs debug messages to the selected serial port
+	KLine.setProtocol("Automatic");  // Optional: communication protocol (default: Automatic; supported: ISO9141, ISO14230_Slow, ISO14230_Fast, Automatic)
+	KLine.setByteWriteInterval(5);   // Optional: delay (ms) between bytes when writing
+	KLine.setInterByteTimeout(60);   // Optional: sets the maximum inter-byte timeout (ms) while receiving data
+	KLine.setReadTimeout(1000);      // Optional: maximum time (ms) to wait for a response after sending a request
+
+	Serial.println("OBD2 Starting.");
+
+	if (KLine.initOBD2()) {
+		int liveDataLength = KLine.readSupportedLiveData();  // Read supported live data PIDs. Mode: 01
+		if (liveDataLength > 0) {
+			Serial.print("LiveData: ");
+			for (int i = 0; i < liveDataLength; i++) {
+				byte supported = KLine.getSupportedData(0x01, i);  // Get supported live data PID
+				Serial.print(supported, HEX);                      // Print the PID in hexadecimal format
+				Serial.print(" ");
+			}
+			Serial.println();
+		} else {
+			Serial.print("LiveData not supported!");
+		}
+	}
+}
 void loop() {
 	// put your main code here, to run repeatedly:
 
@@ -53,17 +79,17 @@ void led_rpm_meter (int LED_ARRAY [], int rpm, unsigned long current_time, unsig
 	int idle_rpm = 900;
 	int flash_rpm = 4000;
 	int flash_interval = 500; // in milliseconds
-	
+
 	if (rpm < flash_rpm) {
 		for (int i = 0; i < led_amount; i++) {
-			if (i <= (0 - led_amount) / (idle_rpm - flash_rpm) * (rpm - idle_rpm) { // equation is based on a linear graph in point slope form: y = m(x - x1) + y1
+			if (i <= (0 - led_amount) / (idle_rpm - flash_rpm) * (rpm - idle_rpm)) { // equation is based on a linear graph in point slope form: y = m(x - x1) + y1
 
-				digitalWrite (LED_ARRAY[i], HIGH);
-			} else {
-				digitalWrite ( LED_ARRAY, LOW );
-			}
-		}
-	} else {
-		led_flash (LED_ARRAY, flash_interval, current_time, previous_time);
-	}
-}
+					digitalWrite (LED_ARRAY[i], HIGH);
+					} else {
+					digitalWrite ( LED_ARRAY[i], LOW );
+					}
+					}
+					} else {
+					led_flash (LED_ARRAY, flash_interval, current_time, previous_time);
+					}
+					}
