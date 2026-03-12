@@ -11,9 +11,9 @@ int flash_state;
 
 // k line global varibles 
 AltSoftSerial alt_serial;
-OBD2_KLine KLine(alt_serial, 10400, 0, 1);  // Uses Hardware Serial (Serial1) at 10400 baud, with RX on pin 10 and TX on pin 11.
+OBD2_KLine KLine(alt_serial, 10400, 0, 1);  // Uses Hardware Serial (Serial1) at 10400 baud, with RX on pin 0 and TX on pin 1.
 bool supported_pids [200];
-
+int user_defined_pids [5] = {0x0C, 0x0B, 0x0A, 0x0F, 0x11}; // defined by user, will make better way to interact with in future
 void setup() {
 	// setting led pins
 	for (int i = 0; i < 10; i++) {
