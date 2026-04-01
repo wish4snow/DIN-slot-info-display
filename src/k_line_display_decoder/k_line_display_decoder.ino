@@ -44,15 +44,17 @@ void setup() {
 	if (KLine.initOBD2()) {
 		int liveDataLength = KLine.readSupportedLiveData();  // Read supported live data PIDs. Mode: 01
 		if (liveDataLength > 0) {
-      Serial.println(liveDataLength);
+			Serial.println(liveDataLength);
 			Serial.print("LiveData: ");
+			
 			for (int i = 0; i < liveDataLength; i++) {
+
 				byte supported = KLine.getSupportedData(0x01, i);  // Get supported live data PID
 				Serial.print(supported, HEX);                      // Print the PID in hexadecimal format
 				Serial.print(" ");
 
-        supported_pids[i] = (bool)supported;
-        
+				supported_pids[i] = (bool)supported;
+			
 			}
 			Serial.println();
 		} else {
