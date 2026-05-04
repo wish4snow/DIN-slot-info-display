@@ -94,7 +94,7 @@ void led_rpm_meter (int LED_ARRAY_PINS [], int rpm, unsigned long current_time, 
 
 	if (rpm < flash_rpm) {
 		for (int i = 0; i < led_amount; i++) {
-			if (i <= (0 - led_amount) / (idle_rpm - flash_rpm) * (rpm - idle_rpm)) { // equation is based on a linear graph in point slope form: y = m(x - x1) + y1
+			if (i <= (float) (0 - led_amount) / (idle_rpm - flash_rpm) * (rpm - idle_rpm)) { // equation is based on a linear graph in point slope form: y = m(x - x1) + y1
 
 					digitalWrite (LED_ARRAY_PINS[i], HIGH);
 					} else {
