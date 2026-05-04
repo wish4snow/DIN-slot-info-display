@@ -3,7 +3,7 @@
 #include <LiquidCrystal_I2C.h>
 
 // LED bar global varibles
-const int LED_ARRAY_PINS [] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+const int LED_ARRAY_PINS [] = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
 const int led_amount = 11;
 unsigned long current_time = 0;
 unsigned long previous_time = 0;
@@ -72,7 +72,7 @@ void led_flash (int LED_ARRAY_PINS [], int interval, unsigned long current_time 
 	if (current_time >= *previous_time + interval) {
 		*previous_time = current_time;
 
-		if (flash_state = HIGH) {
+		if (flash_state == HIGH) {
 
 			flash_state = LOW;
 		} else {
@@ -80,7 +80,7 @@ void led_flash (int LED_ARRAY_PINS [], int interval, unsigned long current_time 
 			flash_state = HIGH;
 		}
 
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 11; i++) {
 			digitalWrite(LED_ARRAY_PINS[i], flash_state);
 		}
 	}
