@@ -17,10 +17,11 @@ bool supported_pids [200];
 int user_defined_pids [5] = {0x0C, 0x0B, 0x0A, 0x0F, 0x11}; // defined by user, will make better way to interact with in future
 void setup() {
 	// setting led pins
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 11; i++) {
 		pinMode(LED_ARRAY_PINS[i], OUTPUT);
 	}
 
+	led_rpm_meter (LED_ARRAY_PINS, 0, &flash_state, current_time, &previous_time);
 	//I2C LCD setup
 	LiquidCrystal_I2C lcd_left (0x27,16,2);
 	LiquidCrystal_I2C lcd_right (0x26,16,2);
@@ -62,9 +63,11 @@ void setup() {
 			Serial.print("LiveData not supported!");
 		}
 	}
+	Serial.println("end");
 }
 void loop() {
-	led_rpm_meter (LED_ARRAY_PINS, 2000, flash_state, current_time, &previous_time);
+	current_time = millis();
+	led_rpm_meter (LED_ARRAY_PINS, 5000, flash_state, current_time, &previous_time);
 	// put your main code here, to run repeatedly:
 
 }
