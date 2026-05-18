@@ -2,6 +2,7 @@
 #include <OBD2_KLine.h>
 #include <LiquidCrystal_I2C.h>
 #include "led_bar.h"
+#include "lcd_format.h"
 
 // LED bar global varibles
 const int LED_ARRAY_PINS [] = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
