@@ -1,6 +1,5 @@
 #include <AltSoftSerial.h>
 #include <OBD2_KLine.h>
-#include <LiquidCrystal_I2C.h>
 #include "led_bar.h"
 #include "lcd_format.h"
 
