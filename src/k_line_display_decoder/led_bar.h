@@ -1,8 +1,12 @@
-void led_flash (int LED_ARRAY_PINS [], int interval, int *flash_state, unsigned long current_time, unsigned long *previous_time) {
+void led_flash (int LED_ARRAY_PINS [], int interval) {
+	static unsigned long current_time = 0;
+	static unsigned long previous_time = 0;
+	static int flash_state = LOW;
 
-	if (current_time >= *previous_time + interval) {
-		*previous_time = current_time;
-		*flash_state = (*flash_state == HIGH) ? LOW : HIGH;
+	current_time = millis();
+	if (current_time >= previous_time + interval) {
+		previous_time = current_time;
+		flash_state = (flash_state == HIGH) ? LOW : HIGH;
 		/*
 		if (flash_state == HIGH) {
 
@@ -13,12 +17,12 @@ void led_flash (int LED_ARRAY_PINS [], int interval, int *flash_state, unsigned 
 		}
 		*/
 		for (int i = 0; i < 11; i++) {
-			digitalWrite(LED_ARRAY_PINS[i], *flash_state);
+			digitalWrite(LED_ARRAY_PINS[i], flash_state);
 		}
 	}
 }
 
-void led_rpm_meter (int LED_ARRAY_PINS [], int rpm, int *flash_state, unsigned long current_time, unsigned long *previous_time) {
+void led_rpm_meter (int LED_ARRAY_PINS [], int rpm) {
 
 	int idle_rpm = 900;
 	int flash_rpm = 4000;
@@ -38,6 +42,6 @@ void led_rpm_meter (int LED_ARRAY_PINS [], int rpm, int *flash_state, unsigned l
 			*/
 		}
 	} else {
-		led_flash (LED_ARRAY_PINS, flash_interval, flash_state, current_time, previous_time);
+		led_flash (LED_ARRAY_PINS, flash_interval);
 	}
 }

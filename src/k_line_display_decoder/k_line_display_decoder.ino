@@ -6,9 +6,6 @@
 // LED bar global varibles
 const int LED_ARRAY_PINS [] = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
 const int led_amount = 11;
-unsigned long current_time = 0;
-unsigned long previous_time = 0;
-int flash_state;
 
 // k line global varibles 
 AltSoftSerial alt_serial;
@@ -21,7 +18,7 @@ void setup() {
 		pinMode(LED_ARRAY_PINS[i], OUTPUT);
 	}
 
-	led_rpm_meter (LED_ARRAY_PINS, 0, &flash_state, current_time, &previous_time);
+	led_rpm_meter (LED_ARRAY_PINS, 0);
 	//I2C LCD setup
 	LiquidCrystal_I2C lcd_left (0x27,16,2);
 	LiquidCrystal_I2C lcd_right (0x26,16,2);
@@ -66,8 +63,7 @@ void setup() {
 	Serial.println("end");
 }
 void loop() {
-	current_time = millis();
-	led_rpm_meter (LED_ARRAY_PINS, 5000, flash_state, current_time, &previous_time);
+	led_rpm_meter (LED_ARRAY_PINS, 5000);
 	// put your main code here, to run repeatedly:
 
 }
