@@ -1,4 +1,4 @@
-void led_flash (int LED_ARRAY_PINS [], int interval) {
+void led_flash (const int LED_ARRAY_PINS [], int interval) {
 
 	static unsigned long current_time = 0;
 	static unsigned long previous_time = 0;
@@ -18,7 +18,7 @@ void led_flash (int LED_ARRAY_PINS [], int interval) {
 	}
 }
 
-void led_rpm_meter (int LED_ARRAY_PINS [], int rpm) {
+void led_rpm_meter (const int LED_ARRAY_PINS [], int rpm) {
 
 	int idle_rpm = 900;
 	int flash_rpm = 4000;
