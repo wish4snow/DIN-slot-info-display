@@ -13,19 +13,20 @@ OBD2_KLine KLine(alt_serial, 10400, 0, 1);  // Uses Hardware Serial (Serial1) at
 bool supported_pids [200];
 int user_defined_pids [4] = {0x0B, 0x0A, 0x0F, 0x11}; // defined by user, will make better way to interact with in future
 
+//I2C LCD setup
+LiquidCrystal_I2C lcd_left (0x27,16,2);
+LiquidCrystal_I2C lcd_right (0x26,16,2);
+
 void setup() {
 
 	// setting led pins
 	for (int i = 0; i < 11; i++) {
 		pinMode(LED_ARRAY_PINS[i], OUTPUT);
 	}
-	
+
 	//turns rpm fully off when setup code is initalized
 	led_rpm_meter (LED_ARRAY_PINS, 0);
 
-	//I2C LCD setup
-	LiquidCrystal_I2C lcd_left (0x27,16,2);
-	LiquidCrystal_I2C lcd_right (0x26,16,2);
 
 	lcd_left.init();
 	lcd_right.init();
@@ -47,12 +48,12 @@ void setup() {
 	if (KLine.initOBD2()) {
 
 		int liveDataLength = KLine.readSupportedLiveData();  // Read supported live data PIDs. Mode: 01
-		
+
 		if (liveDataLength > 0) {
-	
+
 			Serial.println(liveDataLength);
 			Serial.print("LiveData: ");
-			
+
 			for (int i = 0; i < liveDataLength; i++) {
 
 				byte supported = KLine.getSupportedData(0x01, i);  // Get supported live data PID
@@ -60,9 +61,9 @@ void setup() {
 				Serial.print(" ");
 
 				supported_pids[i] = (bool)supported;
-			
+
 			}
-		
+
 			Serial.println();
 
 		} else {
@@ -80,5 +81,14 @@ void loop() {
 	}
 	// put your main code here, to run repeatedly:
 
+	for (int i = 0; i < 2; i++) {
+		write (lcd_left, i, "some", String(pid_values[i]));
+	}
+
+
+	for (int i = 0; i < 2; i++) {
+		write(lcd_right, i, "some", String(pid_values[i + 2]));
+
+	}
 }
 
