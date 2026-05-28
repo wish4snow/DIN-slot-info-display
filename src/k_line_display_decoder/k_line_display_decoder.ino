@@ -11,7 +11,7 @@ const int led_amount = 11;
 AltSoftSerial alt_serial;
 OBD2_KLine KLine(alt_serial, 10400, 0, 1);  // Uses Hardware Serial (Serial1) at 10400 baud, with RX on pin 0 and TX on pin 1.
 bool supported_pids [200];
-int user_defined_pids [5] = {0x0C, 0x0B, 0x0A, 0x0F, 0x11}; // defined by user, will make better way to interact with in future
+int user_defined_pids [4] = {0x0B, 0x0A, 0x0F, 0x11}; // defined by user, will make better way to interact with in future
 
 void setup() {
 
@@ -72,7 +72,12 @@ void setup() {
 	Serial.println("end");
 }
 void loop() {
-	led_rpm_meter (LED_ARRAY_PINS, 5000);
+	int pid_values [4];
+	led_rpm_meter (LED_ARRAY_PINS, KLine.getLiveData(0x0C));
+
+	for (int i = 0; i < 4; i++) {
+		pid_values [i] = KLine.getLiveData(user_defined_pids [i]);
+	}
 	// put your main code here, to run repeatedly:
 
 }
